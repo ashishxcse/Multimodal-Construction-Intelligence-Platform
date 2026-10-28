@@ -1,0 +1,30 @@
+[tool.pytest.ini_options]
+# Root directory for test discovery
+testpaths = ["tests"]
+# Add the backend package root to sys.path so that `schemas`, `main`, etc. are importable
+pythonpath = ["."]
+
+# Explicit asyncio loop scope suppresses the pytest-asyncio deprecation notice
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "session"
+
+# Show concise test output with extra info on failures
+addopts = "-v --tb=short"
+
+# Silence known harmless deprecation warnings from third-party libs
+filterwarnings = [
+    "ignore::DeprecationWarning:starlette",
+    "ignore::DeprecationWarning:httpx",
+]
+
+[tool.coverage.run]
+source = ["."]
+omit = ["tests/*", "__pycache__/*", ".venv/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false
+
+[tool.pyright]
+extraPaths = ["."]
+

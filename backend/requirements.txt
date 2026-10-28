@@ -1,0 +1,25 @@
+# ─── Web Framework ────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.0
+
+# ─── Data Validation ──────────────────────────────────────────
+pydantic==2.9.2
+pydantic-settings==2.6.1
+
+# ─── AI / Groq SDK ────────────────────────────────────────────
+groq==1.7.0
+
+# ─── File Handling & Uploads ──────────────────────────────────
+python-multipart==0.0.12
+pillow==10.4.0
+aiofiles==23.2.1
+
+# ─── HTTP Client (Groq transport + test client) ───────────────
+httpx==0.27.2
+
+# ─── Environment Configuration ────────────────────────────────
+python-dotenv==1.0.1
+
+# ─── Testing ──────────────────────────────────────────────────
+pytest==8.3.3
+pytest-asyncio==0.24.0

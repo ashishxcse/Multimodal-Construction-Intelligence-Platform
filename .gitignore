@@ -1,0 +1,62 @@
+# ───────────────────────────────────────────────────────────────
+#  ConstructAI Monorepo — Root .gitignore
+# ───────────────────────────────────────────────────────────────
+
+# ─── Environment files (NEVER commit real secrets) ─────────────
+.env
+.env.*
+!.env.example
+*.env
+
+# ─── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.spec
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+
+# ─── Node / Frontend ────────────────────────────────────────────
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/test-results/
+frontend/playwright-report/
+frontend/playwright/.cache/
+
+# Package manager locks (keep package-lock.json, ignore others)
+yarn.lock
+pnpm-lock.yaml
+
+# ─── IDE / Editor ───────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ─── Uploads / Temp ─────────────────────────────────────────────
+uploads/
+tmp/
+*.log
